@@ -35,15 +35,15 @@ Enter file in which to save the key (/home/user/.sshid_ed25519): [Precione ENTER
    SHA256:BnfBJBhk3f7eqewNfXSWneROUZdX+6wkAF3qN4dVG/4 your_email@example.com
    The key's randomart image is:
    +--[ED25519 256]--+
-   |     .++o=o..  .B|
-   |     .. .o+o  .oB|
-   |      . ..+   .*.|
-   |       o o.. oo.B|
-   |        S ..= o=E|
-   |       .   ..*o+.|
-   |           ...oo.|
-   |           ..oo. |
-   |           .+..  |
+   |     .++ovo..  .B|
+   |     . .o_o  .oB |
+   |    (⌐■_■)   .*. |
+   |       oo.. oo.B |
+   |  ^_____^ ..= o=E|
+   |...*    ಠ_ಠ     |
+   |   ¯\_(ツ)_/¯.O.O|
+   |           ..o_o.|
+   |        ^o^.+..  |
    +----[SHA256]-----+
    ```
 **Agora digite a linha abaixo para iniciar o ssh-agent em segundo plano:**
