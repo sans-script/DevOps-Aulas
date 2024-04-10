@@ -75,7 +75,7 @@ Enter file in which to save the key (/home/user/.sshid_ed25519): [Precione ENTER
    > ssh-ed25519 sdbjabfbaAquiVaiUmMonteDeLetrakzj3U23nCU +sw2yUs3/6Tu your_email@exemple.com
    ```
 
-**Adicionando a chave pública ao GitHub[^2]** 
+**Adicionando a chave pública ao GitHub [^2]** 
 
 1. Acesse o GitHub em seu navegador e faça login em sua conta.
 
@@ -109,8 +109,7 @@ Enter file in which to save the key (/home/user/.sshid_ed25519): [Precione ENTER
 
 4. Envie as alterações para o repositório remoto usando o comando `git push`.
 
-   > [!NOTE]
-   > Aqui é necessário que o Git saiba quem você é. Para isso, é  necessário definir um usuário usando o comando `git config   --global user.name "Fulano de Tal"` e um email usando o comando  `git config --global user.email fulanodetal@exemplo.br`. Caso   não tenha feito isso seu PC vai explodir brincadeira, o Git   apenas vai retornar um erro após a tentativa de push e solicitar que você execute essas linhas de comando. [^4]
+   > **Nota:** Aqui é necessário que o Git saiba quem você é. Para isso, é  necessário definir um usuário usando o comando `git config   --global user.name "Fulano de Tal"` e um email usando o comando  `git config --global user.email fulanodetal@exemplo.br`. Caso   não tenha feito isso seu PC vai explodir brincadeira, o Git   apenas vai retornar um erro após a tentativa de push e solicitar que você execute essas linhas de comando. [^4]
    
 
 * Confirme que você configurou o nome e de usuário e email corretamente no Git:
@@ -221,8 +220,8 @@ Aqui estão explicações e exemplos de uso dos comandos `git rebase`, `git merg
    ```bash
    git add .
    ```
-   > [!NOTE]
-   > O . no comando acima significa que todos os arquivos serão adicionados de uma vez, diferente do primeiro onde você especifica o nome do arquivo um por um.
+
+   > **NOTA:** O . no comando acima significa que todos os arquivos serão adicionados de uma vez, diferente do primeiro onde você especifica o nome do arquivo um por um.
 
 
 3. **Faça um commit das alterações**:
