@@ -6,7 +6,7 @@ O SSH (Secure Shell) é um protocolo de rede que permite a comunicação segura 
 
 Este guia irá te auxiliar na configuração do SSH para o GitHub no Ubuntu, incluindo a geração de chaves SSH, adição da chave pública ao GitHub e utilização do SSH para clonar, gerenciar e enviar seus projetos.
 
-## Gerando uma nova chave SSH[^1]
+## Gerando uma nova chave SSH [^1]
 
 **Abra o terminal do Ubuntu e digite:**
    ```
@@ -54,7 +54,7 @@ Enter file in which to save the key (/home/user/.sshid_ed25519): [Precione ENTER
    ```
    > Agent pid 33908
    ```
-**Adicione sua chave SSH privada ao ssh-agent digitando:**[^2]
+**Adicione sua chave SSH privada ao ssh-agent digitando:** [^2]
    ```
    $ ssh-add ~/.ssh/id_ed25519
    ```
@@ -75,7 +75,7 @@ Enter file in which to save the key (/home/user/.sshid_ed25519): [Precione ENTER
    > ssh-ed25519 sdbjabfbaAquiVaiUmMonteDeLetrakzj3U23nCU +sw2yUs3/6Tu your_email@exemple.com
    ```
 
-**Adicionando a chave pública ao GitHub**[^2]
+**Adicionando a chave pública ao GitHub** [^2]
 
 1. Acesse o GitHub em seu navegador e faça login em sua conta.
 
@@ -130,7 +130,7 @@ Enter file in which to save the key (/home/user/.sshid_ed25519): [Precione ENTER
 * Certifique-se de manter sua chave SSH privada segura e não a compartilhe com ninguém.
 * O uso do SSH é recomendado para maior segurança na comunicação com o GitHub.
 
-## Git[^4]
+## Git [^4]
 
 O Git é um sistema de controle de versão distribuído que facilita a colaboração em projetos de software, permitindo que várias pessoas trabalhem nos mesmos arquivos simultaneamente. Ele registra as alterações feitas nos arquivos ao longo do tempo, possibilitando a recuperação de versões anteriores do projeto.
 
