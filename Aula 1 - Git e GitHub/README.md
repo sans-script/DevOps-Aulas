@@ -128,7 +128,133 @@ Enter file in which to save the key (/home/user/.sshid_ed25519): [Precione ENTER
 * Certifique-se de manter sua chave SSH privada segura e não a compartilhe com ninguém.
 * O uso do SSH é recomendado para maior segurança na comunicação com o GitHub.
 
+## Git
 
+O Git é um sistema de controle de versão distribuído que facilita a colaboração em projetos de software, permitindo que várias pessoas trabalhem nos mesmos arquivos simultaneamente. Ele registra as alterações feitas nos arquivos ao longo do tempo, possibilitando a recuperação de versões anteriores do projeto.
+
+**Controle de Versão e o Git**
+
+Um sistema de controle de versão (VCS) monitora o histórico de alterações em projetos colaborativos, fornecendo informações sobre quem fez as alterações, quando e por quê. O Git é um VCS distribuído, o que significa que cada desenvolvedor tem uma cópia completa do projeto e seu histórico, permitindo colaboração sem a necessidade de uma conexão constante com um repositório central.
+
+**Sobre Repositórios**
+
+Um repositório Git é onde os arquivos e o histórico de alterações de um projeto são armazenados. Cada commit representa uma alteração feita em um arquivo, e os commits podem ser organizados em branches, que são linhas de desenvolvimento separadas. Repositórios Git são unidades autocontidas e qualquer pessoa com uma cópia pode acessar todo o código e histórico do projeto.
+
+**Como o GitHub Funciona**
+
+O GitHub hospeda repositórios Git e fornece ferramentas para colaboração, como problemas, pull requests e revisão de código. Ele permite que os desenvolvedores trabalhem juntos em projetos, organizando o trabalho em repositórios e facilitando a criação de branches para desenvolvimento, envio de alterações, discussão de propostas e mesclagem de alterações.
+
+**Comandos Básicos do Git**
+
+- `git init`: inicializa um novo repositório Git.
+- `git clone`: cria uma cópia local de um projeto remoto.
+- `git add`: prepara alterações para serem incluídas no próximo commit.
+- `git commit`: salva um snapshot das alterações no histórico do projeto.
+- `git status`: mostra o status das alterações.
+- `git branch`: lista as branches locais.
+- `git merge`: mescla linhas de desenvolvimento.
+- `git pull`: atualiza o branch local com alterações remotas.
+- `git push`: envia commits locais para o repositório remoto.
+
+**Comandos mais avançados do Git**
+
+Aqui estão explicações e exemplos de uso dos comandos `git rebase`, `git merge` e `git stash`:
+
+1. `git rebase`: usado para reorganizar o histórico de commits de uma branch. Ele move ou combina uma sequência de commits de uma branch para outra, alterando a base (base) dos commits. Isso é útil para manter um histórico de commits limpo e linear.
+
+    **Exemplo:**
+    Suponha que você esteja trabalhando em uma branch `feature`, e  enquanto você está trabalhando nela, vários commits foram adicionados à branch principal (`main`). Antes de mesclar sua    `feature` de volta à `main`, você pode reorganizar seu  histórico de commits usando `git rebase` para que ele se  aplique limpa e linearmente ao topo da `main`.
+
+    ```
+    $ git checkout feature
+    $ git rebase main
+    ```
+
+<br>
+
+2. `git merge`: usado para mesclar duas ou mais linhas de desenvolvimento (geralmente branches) juntas. Ele combina as alterações de uma branch específica em outra, criando um novo commit que representa a combinação dessas alterações.
+
+    **Exemplo:**
+    Suponha que você tenha terminado de trabalhar em uma nova   funcionalidade na branch `nova-funcionalidade` e queira mesclar   suas alterações de volta à branch `main`. Você pode fazer isso    usando `git merge`:
+
+        
+    ```
+    $ git checkout main
+    $ git merge nova-funcionalidade
+    ```
+
+<br>
+
+
+3. `git stash`: usado para temporariamente armazenar alterações locais que ainda não foram commitadas em um local temporário chamado "stash". Isso permite que você limpe o seu diretório de trabalho e mude para outra branch sem ter que fazer um commit não relacionado ou perder suas alterações.
+
+    **Exemplo:**
+    Suponha que você esteja trabalhando em uma branch `feature` e   precise mudar para outra branch `bugfix` para corrigir um problema    urgente. No entanto, você ainda não terminou de trabalhar na   `feature`. Você pode usar `git stash` para armazenar  temporariamente suas alterações, mudar para a branch `bugfix` e  depois aplicar suas alterações novamente quando estiver pronto:
+
+    ```markdown
+    $ git checkout main
+    $ git merge nova-funcionalidade
+    # Faça as correções necessárias
+    $ git stash apply
+    ```
+
+
+
+
+
+
+**Como criar um repositório e subir alterações usando a linha de comando do Git**
+
+1. **Inicialize um novo repositório Git localmente**:
+   Abra o terminal ou prompt de comando e navegue até o diretório onde deseja criar o repositório. Em seguida, execute o comando `git init` para inicializar um novo repositório Git neste diretório.
+
+   ```bash
+   git init
+   ```
+
+2. **Adicione arquivos ao repositório**:
+   Adicione os arquivos que você deseja incluir no repositório usando o comando `git add`. Você pode adicionar arquivos específicos ou adicionar todos os arquivos no diretório usando `git add .`.
+
+   ```bash
+   git add arquivo1.txt arquivo2.txt
+   ```
+
+   ou
+
+   ```bash
+   git add .
+   ```
+
+3. **Faça um commit das alterações**:
+   Depois de adicionar os arquivos, você precisa fazer um commit para confirmar as alterações no repositório. Use o comando `git commit -m "Mensagem do commit"` para fazer isso. Substitua "Mensagem do commit" por uma breve descrição das alterações que você está commitando.
+
+   ```bash
+   git commit -m "Adicionando arquivos de projeto inicial"
+   ```
+
+4. **Conecte seu repositório local a um repositório remoto**:
+   Se ainda não tiver um repositório remoto configurado (por exemplo, no GitHub), você precisará conectá-lo ao seu repositório local. Use o comando `git remote add origin URL_DO_REPOSITORIO_REMOTO`, substituindo `URL_DO_REPOSITORIO_REMOTO` pela URL do seu repositório remoto.
+
+   ```bash
+   git remote add origin https://github.com/seu_usuario/seu_repositorio.git
+   ```
+
+5. **Envie suas alterações para o repositório remoto**:
+   Agora que seu repositório local está conectado ao repositório remoto, você pode enviar suas alterações usando o comando `git push`. Use `git push -u origin NOME_DO_BRANCH` para enviar suas alterações para um branch específico no repositório remoto. Se for a primeira vez que você está empurrando para este branch, você precisa usar a opção `-u` para definir a conexão upstream.
+
+   ```bash
+   git push -u origin main
+   ```
+
+   ou
+
+   ```bash
+   git push -u origin master
+   ```
+
+   Dependendo do nome do branch padrão em seu repositório.
+
+Agora suas alterações locais foram enviadas para o repositório remoto e estão disponíveis para colaboradores ou para serem acessadas de outros dispositivos. Certifique-se de atualizar seu repositório local usando `git pull` sempre que começar a trabalhar em um novo conjunto de alterações para garantir que você esteja sincronizado com as alterações remotas mais recentes.
 
 **Referências**
 
@@ -145,3 +271,4 @@ Enter file in which to save the key (/home/user/.sshid_ed25519): [Precione ENTER
 <br>
 
 - Sobre o Git - Documentação do GitHub. Disponível em: <https://docs.github.com/pt/get-started/using-git/about-git>. Acesso em: 10 de abr. de 2024.
+
