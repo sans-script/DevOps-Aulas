@@ -54,7 +54,7 @@ Enter file in which to save the key (/home/user/.sshid_ed25519): [Precione ENTER
    ```
    > Agent pid 33908
    ```
-**Adicione sua chave SSH privada ao ssh-agent digitando:[^2]** 
+**Adicione sua chave SSH privada ao ssh-agent digitando: [^2]** 
    ```
    $ ssh-add ~/.ssh/id_ed25519
    ```
@@ -110,7 +110,7 @@ Enter file in which to save the key (/home/user/.sshid_ed25519): [Precione ENTER
 4. Envie as alterações para o repositório remoto usando o comando `git push`.
 
    > [!NOTE]
-   > Aqui é necessário que o Git saiba quem você é. Para isso, é  necessário definir um usuário usando o comando `git config   --global user.name "Fulano de Tal"` e um email usando o comando  `git config --global user.email fulanodetal@exemplo.br`. Caso   não tenha feito isso seu PC vai explodir brincadeira, o Git   apenas vai retornar um erro após a tentativa de push e solicitar que você execute essas linhas de comando.
+   > Aqui é necessário que o Git saiba quem você é. Para isso, é  necessário definir um usuário usando o comando `git config   --global user.name "Fulano de Tal"` e um email usando o comando  `git config --global user.email fulanodetal@exemplo.br`. Caso   não tenha feito isso seu PC vai explodir brincadeira, o Git   apenas vai retornar um erro após a tentativa de push e solicitar que você execute essas linhas de comando. [^4]
    
 
 * Confirme que você configurou o nome e de usuário e email corretamente no Git:
@@ -130,7 +130,7 @@ Enter file in which to save the key (/home/user/.sshid_ed25519): [Precione ENTER
 * Certifique-se de manter sua chave SSH privada segura e não a compartilhe com ninguém.
 * O uso do SSH é recomendado para maior segurança na comunicação com o GitHub.
 
-## Git[^4]
+## Git [^4]
 
 O Git é um sistema de controle de versão distribuído que facilita a colaboração em projetos de software, permitindo que várias pessoas trabalhem nos mesmos arquivos simultaneamente. Ele registra as alterações feitas nos arquivos ao longo do tempo, possibilitando a recuperação de versões anteriores do projeto.
 
@@ -261,4 +261,3 @@ Pronto! Agora suas alterações locais foram enviadas para o repositório remoto
 [^3]: Git - Book. Disponível em: <https://git-scm.com/book/pt-br/v2/Come%C3%A7ando-Configura%C3%A7%C3%A3o-Inicial-do-Git>. Acesso em: 10 de abr. de 2024.
 
 [^4]: Sobre o Git - Documentação do GitHub. Disponível em: <https://docs.github.com/pt/get-started/using-git/about-git>. Acesso em: 10 de abr. de 2024.
-
