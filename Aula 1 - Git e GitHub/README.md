@@ -24,8 +24,8 @@ Enter file in which to save the key (/home/user/.sshid_ed25519): [Precione ENTER
 **Saída:**
    ```
    > Created directory '/home/user/.ssh'.
-   Enter passphrase (empty for no passphrase): [Aqui você precisa criar uma senha e precionar ENTER]
-   Enter same passphrase again: [Digite sua senha novamente e precione ENTER]
+   Enter passphrase (empty for no passphrase): [Aqui você precisa criar uma senha]
+   Enter same passphrase again: [Digite sua senha novamente]
    ```
 **Saída:**
    ```
@@ -132,16 +132,16 @@ Enter file in which to save the key (/home/user/.sshid_ed25519): [Precione ENTER
 
 **Referências**
 
-- Gerando uma nova chave SSH e adicionando-a ao agente SSH. Disponível em: <https://docs.github.com/pt/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent>. Acesso em: 10 abr. 2024.
+- Gerando uma nova chave SSH e adicionando-a ao agente SSH. Disponível em: <https://docs.github.com/pt/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent>. Acesso em: 10 de abr. de 2024.
 
 <br>
 
-- Adicionar uma nova chave SSH à sua conta do GitHub. Disponível em: <https://docs.github.com/pt/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account>. Acesso em: 10 abr. 2024.
+- Adicionar uma nova chave SSH à sua conta do GitHub. Disponível em: <https://docs.github.com/pt/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account>. Acesso em: 10 de abr. de 2024.
 
 <br>
 
-- Git - Book. Disponível em: <https://git-scm.com/book/pt-br/v2/Come%C3%A7ando-Configura%C3%A7%C3%A3o-Inicial-do-Git>. Acesso em: 10 abr. 2024.
+- Git - Book. Disponível em: <https://git-scm.com/book/pt-br/v2/Come%C3%A7ando-Configura%C3%A7%C3%A3o-Inicial-do-Git>. Acesso em: 10 de abr. de 2024.
 
 <br>
 
-- Sobre o Git - Documentação do GitHub. Disponível em: <https://docs.github.com/pt/get-started/using-git/about-git>. Acesso em: 10 abr. 2024.
+- Sobre o Git - Documentação do GitHub. Disponível em: <https://docs.github.com/pt/get-started/using-git/about-git>. Acesso em: 10 de abr. de 2024.
