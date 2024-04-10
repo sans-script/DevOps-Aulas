@@ -254,17 +254,17 @@ Pronto! Agora suas alterações locais foram enviadas para o repositório remoto
 
 **Referências**
 
-- [^1]: Gerando uma nova chave SSH e adicionando-a ao agente SSH. Disponível em: <https://docs.github.com/pt/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent>. Acesso em: 10 de abr. de 2024.
+[^1]: Gerando uma nova chave SSH e adicionando-a ao agente SSH. Disponível em: <https://docs.github.com/pt/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent>. Acesso em: 10 de abr. de 2024.
 
 <br>
 
-- [^2]: Adicionar uma nova chave SSH à sua conta do GitHub. Disponível em: <https://docs.github.com/pt/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account>. Acesso em: 10 de abr. de 2024.
+[^2]: Adicionar uma nova chave SSH à sua conta do GitHub. Disponível em: <https://docs.github.com/pt/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account>. Acesso em: 10 de abr. de 2024.
 
 <br>
 
-- [^3]: Git - Book. Disponível em: <https://git-scm.com/book/pt-br/v2/Come%C3%A7ando-Configura%C3%A7%C3%A3o-Inicial-do-Git>. Acesso em: 10 de abr. de 2024.
+[^3]: Git - Book. Disponível em: <https://git-scm.com/book/pt-br/v2/Come%C3%A7ando-Configura%C3%A7%C3%A3o-Inicial-do-Git>. Acesso em: 10 de abr. de 2024.
 
 <br>
 
-- [^4]: Sobre o Git - Documentação do GitHub. Disponível em: <https://docs.github.com/pt/get-started/using-git/about-git>. Acesso em: 10 de abr. de 2024.
+[^4]: Sobre o Git - Documentação do GitHub. Disponível em: <https://docs.github.com/pt/get-started/using-git/about-git>. Acesso em: 10 de abr. de 2024.
 
