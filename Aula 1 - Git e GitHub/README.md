@@ -198,11 +198,6 @@ Aqui estão explicações e exemplos de uso dos comandos `git rebase`, `git merg
     $ git stash apply
     ```
 
-
-
-
-
-
 **Como criar um repositório e subir alterações usando a linha de comando do Git**
 
 1. **Inicialize um novo repositório Git localmente**:
@@ -224,6 +219,7 @@ Aqui estão explicações e exemplos de uso dos comandos `git rebase`, `git merg
    ```bash
    git add .
    ```
+**O . no comando acima significa que todos os arquivos serão adicionados de uma vez**
 
 3. **Faça um commit das alterações**:
    Depois de adicionar os arquivos, você precisa fazer um commit para confirmar as alterações no repositório. Use o comando `git commit -m "Mensagem do commit"` para fazer isso. Substitua "Mensagem do commit" por uma breve descrição das alterações que você está commitando.
@@ -240,21 +236,17 @@ Aqui estão explicações e exemplos de uso dos comandos `git rebase`, `git merg
    ```
 
 5. **Envie suas alterações para o repositório remoto**:
-   Agora que seu repositório local está conectado ao repositório remoto, você pode enviar suas alterações usando o comando `git push`. Use `git push -u origin NOME_DO_BRANCH` para enviar suas alterações para um branch específico no repositório remoto. Se for a primeira vez que você está empurrando para este branch, você precisa usar a opção `-u` para definir a conexão upstream.
+   Agora que seu repositório local está conectado ao repositório remoto, você pode enviar suas alterações usando o comando `git push`. Sua branch talvez esteja, por padrão, nomeada como `master`. Para resolver isso,  o comando `git branch -M main` é utilizado para renomear o branch atual para `main`.
 
+   ```bash
+   git branch -M main
+   ```
+**Em seguida execute:**
    ```bash
    git push -u origin main
    ```
 
-   ou
-
-   ```bash
-   git push -u origin master
-   ```
-
-   Dependendo do nome do branch padrão em seu repositório.
-
-Agora suas alterações locais foram enviadas para o repositório remoto e estão disponíveis para colaboradores ou para serem acessadas de outros dispositivos. Certifique-se de atualizar seu repositório local usando `git pull` sempre que começar a trabalhar em um novo conjunto de alterações para garantir que você esteja sincronizado com as alterações remotas mais recentes.
+Pronto! Agora suas alterações locais foram enviadas para o repositório remoto e estão disponíveis para colaboradores ou para serem acessadas de outros dispositivos. Certifique-se de atualizar seu repositório local usando `git pull` sempre que começar a trabalhar em um novo conjunto de alterações para garantir que você esteja sincronizado com as alterações remotas mais recentes.
 
 **Referências**
 
