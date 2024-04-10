@@ -24,8 +24,8 @@ Enter file in which to save the key (/home/user/.sshid_ed25519): [Precione ENTER
 **Saída:**
    ```
    > Created directory '/home/user/.ssh'.
-   Enter passphrase (empty for no passphrase): [Aqui você precisa criar uma senha]
-   Enter same passphrase again: [Digite sua senha novamente]
+   Enter passphrase (empty for no passphrase): [Aqui você precisa criar uma senha e precionar ENTER]
+   Enter same passphrase again: [Digite sua senha novamente e precione ENTER]
    ```
 **Saída:**
    ```
