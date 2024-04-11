@@ -1,4 +1,4 @@
-## Configurando o SSH para o GitHub no Ubuntu
+## Configurando o SSH para o GitHub no Ubuntu 
 
 **Introdução**
 
@@ -13,7 +13,6 @@ Este guia irá te auxiliar na configuração do SSH para o GitHub no Ubuntu, inc
    $ ssh-keygen -t ed25519 -C "your_email@example.com"
    ```
 - **Observação:** se estiver usando um sistema herdado que não dá suporte ao algoritmo Ed25519, use: `ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`
-<br>
 <br>
 
 **Saída:**
@@ -54,7 +53,7 @@ Enter file in which to save the key (/home/user/.sshid_ed25519): [Precione ENTER
    ```
    > Agent pid 33908
    ```
-**Adicione sua chave SSH privada ao ssh-agent digitando: [^2]** 
+**Adicione sua chave SSH privada ao ssh-agent digitando:** 
    ```
    $ ssh-add ~/.ssh/id_ed25519
    ```
@@ -75,7 +74,7 @@ Enter file in which to save the key (/home/user/.sshid_ed25519): [Precione ENTER
    > ssh-ed25519 sdbjabfbaAquiVaiUmMonteDeLetrakzj3U23nCU +sw2yUs3/6Tu your_email@exemple.com
    ```
 
-**Adicionando a chave pública ao GitHub [^2]** 
+**Adicionando a chave pública ao GitHub** [^2]
 
 1. Acesse o GitHub em seu navegador e faça login em sua conta.
 
@@ -109,7 +108,7 @@ Enter file in which to save the key (/home/user/.sshid_ed25519): [Precione ENTER
 
 4. Envie as alterações para o repositório remoto usando o comando `git push`.
 
-   > **Nota:** Aqui é necessário que o Git saiba quem você é. Para isso, é  necessário definir um usuário usando o comando `git config   --global user.name "Fulano de Tal"` e um email usando o comando  `git config --global user.email fulanodetal@exemplo.br`. Caso   não tenha feito isso seu PC vai explodir brincadeira, o Git   apenas vai retornar um erro após a tentativa de push e solicitar que você execute essas linhas de comando. [^4]
+   > **Nota:** Aqui é necessário que o Git saiba quem você é. Para isso, é  necessário definir um usuário usando o comando `git config   --global user.name "Fulano de Tal"` e um email usando o comando  `git config --global user.email fulanodetal@exemplo.br`. Caso   não tenha feito isso seu PC vai explodir brincadeira, o Git   apenas vai retornar um erro após a tentativa de push e solicitar que você execute essas linhas de comando. [^3]
    
 
 * Confirme que você configurou o nome e de usuário e email corretamente no Git:
@@ -125,9 +124,9 @@ Enter file in which to save the key (/home/user/.sshid_ed25519): [Precione ENTER
 
 **Observações**
 
-* Este guia é um resumo básico da configuração do SSH para o GitHub. Para mais informações, consulte os recursos adicionais.
 * Certifique-se de manter sua chave SSH privada segura e não a compartilhe com ninguém.
 * O uso do SSH é recomendado para maior segurança na comunicação com o GitHub.
+* Para mais informações, consulte as referências.
 
 ## Git [^4]
 
@@ -220,10 +219,7 @@ Aqui estão explicações e exemplos de uso dos comandos `git rebase`, `git merg
    ```bash
    git add .
    ```
-
-   > **NOTA:** O . no comando acima significa que todos os arquivos serão adicionados de uma vez, diferente do primeiro onde você especifica o nome do arquivo um por um.
-
-
+   
 3. **Faça um commit das alterações**:
    Depois de adicionar os arquivos, você precisa fazer um commit para confirmar as alterações no repositório. Use o comando `git commit -m "Mensagem do commit"` para fazer isso. Substitua "Mensagem do commit" por uma breve descrição das alterações que você está commitando.
 
