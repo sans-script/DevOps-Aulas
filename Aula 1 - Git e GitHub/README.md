@@ -107,8 +107,8 @@ Enter file in which to save the key (/home/user/.sshid_ed25519): [Precione ENTER
 3. Faça um commit das alterações usando o comando `git commit -m "Mensagem de commit"`.
 
 4. Envie as alterações para o repositório remoto usando o comando `git push`.
-
-   > **Nota:** Aqui é necessário que o Git saiba quem você é. Para isso, é  necessário definir um usuário usando o comando `git config   --global user.name "Fulano de Tal"` e um email usando o comando  `git config --global user.email fulanodetal@exemplo.br`. Caso   não tenha feito isso seu PC vai explodir brincadeira, o Git   apenas vai retornar um erro após a tentativa de push e solicitar que você execute essas linhas de comando. [^3]
+> [!NOTE]
+> **Nota:** Aqui é necessário que o Git saiba quem você é. Para isso, é  necessário definir um usuário usando o comando `git config   --global user.name "Fulano de Tal"` e um email usando o comando  `git config --global user.email fulanodetal@exemplo.br`. Caso   não tenha feito isso seu PC vai explodir brincadeira, o Git  apenas vai retornar um erro após a tentativa de push e solicitar que você execute essas linhas de comando. [^3]
    
 
 * Confirme que você configurou o nome e de usuário e email corretamente no Git:
