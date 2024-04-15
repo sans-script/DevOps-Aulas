@@ -66,9 +66,64 @@ node --version
 
 O comando acima deve retornar a versão atualizada do Node.js instalada. Se retornar a versão antiga, reinicie o terminal e execute o comando novamente para ver a versão atualizada.
 
+## Instalando o Tailwind CSS
+
+**1. Instalação do Tailwind CSS** [^3]
+
+O Tailwind CSS é um framework CSS de código aberto que se destaca por sua abordagem única de design utilitário. Em vez de fornecer estilos pré-estilizados para elementos específicos, ele fornece uma série de classes utilitárias que podem ser diretamente aplicadas aos elementos HTML para estilizá-los. Essas classes representam propriedades CSS individuais, como margens, preenchimentos, cores, tamanhos de fonte, alinhamentos e muito mais. [^4]
+
+Se você ainda não tem um projeto Node.js configurado, crie um novo projeto e navegue até o diretório do projeto. Em seguida, instale o Tailwind CSS via npm:
+
+```bash
+npm install tailwindcss
+```
+
+### 2. Configuração do Tailwind CSS
+
+Após a instalação, você precisa configurar o Tailwind CSS no seu projeto. Você pode gerar um arquivo de configuração padrão executando o seguinte comando:
+
+```bash
+npx tailwindcss init
+```
+
+Isso criará um arquivo `tailwind.config.js` na raiz do seu projeto, onde você pode personalizar as configurações do Tailwind CSS conforme necessário.
+
+### 3. Importação do Tailwind CSS
+
+Depois de configurar o Tailwind CSS, você precisa importá-lo no seu arquivo CSS principal.
+
+#### Importação no CSS
+
+No seu arquivo CSS principal, importe o Tailwind CSS usando a diretiva `@import`:
+
+```css
+/* style.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+### 4. Uso do Tailwind CSS
+
+Agora que o Tailwind CSS está configurado e importado no seu projeto, você pode começar a usá-lo em seu código HTML. Utilize as classes utilitárias fornecidas pelo Tailwind CSS para estilizar seus elementos conforme necessário.
+
+Por exemplo:
+
+```html
+<div class="bg-blue-500 text-white font-bold py-2 px-4 rounded">
+  Botão Tailwind
+</div>
+```
+
+Isso criará um botão com fundo azul, texto branco, fonte em negrito, padding de 2 unidades em y (vertical) e 4 unidades em x (horizontal), e bordas arredondadas.
+
+Com esses passos, você iniciou o uso do Tailwind CSS em seu projeto e está pronto para começar a estilizar sua interface de usuário de forma rápida e eficiente.
+
 **Referências**
 
-[^1]: Como instalar o Node.js no Ubuntu 20.04 | DigitalOcean. Disponível em: https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-20-04-pt. Acesso em: 15 de abr. de 2024. 
+[^1]: Como instalar o Node.js no Ubuntu 20.04 | DigitalOcean. Disponível em: https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-20-04-pt. Acesso em: 15 de abr. de 2024.
 
-‌
 [^2]: Como atualizar o Node.js para a ultima versão no Ubuntu 🐧. Disponível em: https://dev.to/eucarlos/como-atualizar-o-nodejs-para-a-ultima-versao-no-ubuntu-35f3. Acesso em: 15 de abr. de 2024.
+
+[^3]: Installation: Tailwind CLI - Tailwind CSS. Disponível em: https://tailwindcss.com/docs/installation. Acesso em: 15 de abr. de 2024.
+
+[^4]: SANTOS, R. Tailwind CSS: O que é? Como Usar? Disponível em: <https://www.brasilcode.com.br/tailwind-css-o-que-e-como-usar/#:~:text=O%20Tailwind%20CSS%20%C3%A9%20um%20framework%20CSS>. Acesso em: 15 de abr. de 2024.

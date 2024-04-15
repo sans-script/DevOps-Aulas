@@ -1,2 +1,0 @@
-https://dev.to/eucarlos/como-atualizar-o-nodejs-para-a-ultima-versao-no-ubuntu-35f3
-https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-20-04-pt
