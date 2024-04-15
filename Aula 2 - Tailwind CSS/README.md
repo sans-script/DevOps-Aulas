@@ -144,6 +144,9 @@ Ao iniciar um novo projeto Node.js, execute o comando `npm init` ou `npm i` para
   }
 }
 ```
+> [!CAUTION]
+> Arquivos .json não aceitam comentários, os comentários acima são apenas para fins didáticos. Não repita isso em casa.
+
 Portanto, após executar o comando `npm init -y`, execute o comando `npm init` ou `npm i` para gerar os arquivos de controle de versionamento do Node.js
 
 ```bash
