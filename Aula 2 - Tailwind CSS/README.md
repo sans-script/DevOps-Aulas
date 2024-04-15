@@ -78,7 +78,7 @@ Se você ainda não tem um projeto Node.js configurado, crie um novo projeto e n
 npm install tailwindcss
 ```
 
-### 2. Configuração do Tailwind CSS
+2. **Configuração do Tailwind CSS**
 
 Após a instalação, você precisa configurar o Tailwind CSS no seu projeto. Você pode gerar um arquivo de configuração padrão executando o seguinte comando:
 
@@ -88,11 +88,22 @@ npx tailwindcss init
 
 Isso criará um arquivo `tailwind.config.js` na raiz do seu projeto, onde você pode personalizar as configurações do Tailwind CSS conforme necessário.
 
-### 3. Importação do Tailwind CSS
+```js
+/* tailwind.config.js */
+
+@type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./*.{html,js}"], // Especifique o tipo de arquivo inserindo "./*.{html,js}"
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+```
+
+3. **Importação do Tailwind CSS**
 
 Depois de configurar o Tailwind CSS, você precisa importá-lo no seu arquivo CSS principal.
-
-#### Importação no CSS
 
 No seu arquivo CSS principal, importe o Tailwind CSS usando a diretiva `@import`:
 
@@ -102,19 +113,74 @@ No seu arquivo CSS principal, importe o Tailwind CSS usando a diretiva `@import`
 @tailwind components;
 @tailwind utilities;
 ```
-### 4. Uso do Tailwind CSS
+
+
+4. **Instalar as dependências**
+
+Precisamos instalar as dependências com o comando a seguir no termina.
+
+```bash
+npm init -y
+```
+
+Ele é necessário para criar o arquivo package.json
+
+Ao iniciar um novo projeto Node.js, execute o comando `npm init` ou `npm i` para criar o arquivo package.json. Este arquivo contém informações essenciais sobre o seu projeto, como:
+
+```JSON
+{
+  "name": "meu-projeto-node",  // Nome do projeto
+  "version": "0.1.0", // Versão do projeto (geralmente começa com 0.1.0)
+  "description": "Meu primeiro projeto Node.js", // Descrição do projeto
+  "keywords": ["node", "javascript", "express"], // Palavras-chave para pesquisa
+  "author": "Fulano de Tal <fulano@email.com>", // Autor(es) do projeto
+  "license": "MIT", // Licença do projeto
+  "dependencies": { // Dependências do projeto (pacotes Node.js que o seu projeto utiliza)
+    "express": "^4.17.1",
+    "body-parser": "^1.19.0"
+  },
+  "scripts": { // Scripts (comandos para executar tarefas comuns, como testes ou compilação)
+    "test": "echo \"Executando testes...\""
+  }
+}
+```
+Portanto, após executar o comando `npm init -y`, execute o comando `npm init` ou `npm i` para gerar os arquivos de controle de versionamento do Node.js
+
+```bash
+npm init
+```
+
+**Uso do Tailwind CSS**
 
 Agora que o Tailwind CSS está configurado e importado no seu projeto, você pode começar a usá-lo em seu código HTML. Utilize as classes utilitárias fornecidas pelo Tailwind CSS para estilizar seus elementos conforme necessário.
 
 Por exemplo:
 
 ```html
-<div class="bg-blue-500 text-white font-bold py-2 px-4 rounded">
-  Botão Tailwind
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botão Centralizado</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+    <body class="flex items-center justify-center h-screen w-screen">
+        <button class="bg-blue-500 text-white font-bold py-2 px-4 rounded">
+            Hello World
+        </button>
+</body>
+</html>
 ```
 
 Isso criará um botão com fundo azul, texto branco, fonte em negrito, padding de 2 unidades em y (vertical) e 4 unidades em x (horizontal), e bordas arredondadas.
+
+Para rodar sua aplicação, execute no seu terminal a seguinte linha:
+
+```bash
+npx tailwindcss -i ./input.css -o ./output.css --watch
+```
+Seu arquivo de input é o arquivo css do seu projeto, não esqueça de nomear ele como input.css
 
 Com esses passos, você iniciou o uso do Tailwind CSS em seu projeto e está pronto para começar a estilizar sua interface de usuário de forma rápida e eficiente.
 
