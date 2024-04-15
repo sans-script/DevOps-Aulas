@@ -152,6 +152,33 @@ Portanto, após executar o comando `npm init -y`, execute o comando `npm init` o
 ```bash
 npm init
 ```
+## Versionamento  [^5]
+
+![alt text](https://www.alura.com.br/artigos/assets/versionamento-semantico-breve-introducao/imagem4.jpg)
+
+**MAJOR (Maior)**
+
+O primeiro dígito informa a versão de compatibilidade e é alterado caso o software ou biblioteca sofra mudanças que a torne incompatível com outras versões. São as chamadas breaking changes, atualizações que possuem o potencial de “quebrar” códigos que utilizam versões anteriores.
+
+Exemplo: você está usando uma função de uma biblioteca X, porém foi lançada uma nova versão da biblioteca onde essa função tem outro nome ou outra assinatura. Se tentarmos executar o código usando a versão nova da biblioteca, a função não executará corretamente.
+
+Versão 1.0.0 → Agora é 2.0.0
+
+**MINOR (Menor)**
+
+O segundo dígito informa a versão da funcionalidade, onde uma nova função ou melhoria substancial é adicionada e não há problemas de incompatibilidade com outras versões.
+
+Exemplo: A biblioteca que você costuma usar tem agora uma nova funcionalidade e é compatível com outras versões, necessita apenas de atualização local.
+
+Versão 2.0.0 → Agora é 2.1.0
+
+**PATCH (Correção)**
+
+O terceiro dígito informa a versão da correção de bugs, melhorias de desempenho ou alterações similares que não alteram as funcionalidades atuais e nem introduzem novas.
+
+Exemplo: A biblioteca que você costuma usar tem um bug que gera uma vulnerabilidade no código. Esse bug foi corrigido em uma nova versão.
+
+Versão 2.1.0 → Agora é 2.1.1
 
 **Uso do Tailwind CSS**
 
@@ -196,3 +223,6 @@ Com esses passos, você iniciou o uso do Tailwind CSS em seu projeto e está pro
 [^3]: Installation: Tailwind CLI - Tailwind CSS. Disponível em: https://tailwindcss.com/docs/installation. Acesso em: 15 de abr. de 2024.
 
 [^4]: SANTOS, R. Tailwind CSS: O que é? Como Usar? Disponível em: <https://www.brasilcode.com.br/tailwind-css-o-que-e-como-usar/#:~:text=O%20Tailwind%20CSS%20%C3%A9%20um%20framework%20CSS>. Acesso em: 15 de abr. de 2024.
+
+[^5]: Alura. Versionamento Semântico (SemVer): uma breve introdução. Disponível em: https://www.alura.com.br/artigos/versionamento-semantico-breve-introducao?utm_term=&utm_campaign=%5BSearch%5D+%5BPerformance%5D+-+Dynamic+Search+Ads+-+Artigos+e+Conte%C3%BAdos&utm_source=adwords&utm_medium=ppc&hsa_acc=7964138385&hsa_cam=11384329873&hsa_grp=111087461203&hsa_ad=687448474447&hsa_src=g&hsa_tgt=dsa-2276348409543&hsa_kw=&hsa_mt=&hsa_net=adwords&hsa_ver=3&gad_source=1&gclid=CjwKCAjwoPOwBhAeEiwAJuXRh7sGnFxlVpZwukq_8aja29AixpMEjdBnEaRCJI5QHnxjqY4EJpZ5zBoC-NQQAvD_BwE. Acesso em: 15 de abr. de 2024.
+
