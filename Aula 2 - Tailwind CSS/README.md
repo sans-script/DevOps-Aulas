@@ -154,7 +154,7 @@ npm init
 ```
 ## Versionamento  [^5]
 
-![alt text](https://www.alura.com.br/artigos/assets/versionamento-semantico-breve-introducao/imagem4.jpg)
+![1.0.0](https://www.alura.com.br/artigos/assets/versionamento-semantico-breve-introducao/imagem4.jpg)
 
 **MAJOR (Maior)**
 
