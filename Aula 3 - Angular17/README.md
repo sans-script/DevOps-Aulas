@@ -35,7 +35,7 @@ O comando `ng new` cria uma pasta de espaço de trabalho Angular e gera um novo 
 
 Após executar o comando acima, responda cada pergunta que o CLI irá exibir e só assim, após responder cada pergunta, o CLI irá gerar os arquivos e seu projeto estará criado. 
 
-**Primeira pergunta valendo dois mil reais:**
+**Valendo dois mil reais, vamos para a primeira pergunta:**
 
 ```
 ? Would you like to share pseudonymous usage data about this project with the Angular Team
