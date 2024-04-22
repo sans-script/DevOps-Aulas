@@ -75,7 +75,7 @@ Digite `y` ou `N` para abilitar ou desabilitar o SSR e seu projeto será criado
 | Performance em SPA   | Melhor desempenho em Single-Page Applications (SPAs).                                                                                                                                               | Pode haver uma diminuição no desempenho em SPAs.                                                                                                                                                  |
 | Experiência do usuário | Pode haver uma espera perceptível antes que a página se torne interativa.                                                                                                                         | Página é visível mais rapidamente para o usuário, mas pode haver uma pequena espera antes que a interatividade completa seja alcançada.                                                          |
 
->[NOTE]
+>[!NOTE]
 >SPA significa "Single Page Application", que traduzido para o português seria "Aplicação de Página Única". Uma SPA é um tipo de aplicativo da web que opera em uma única página web, sem a necessidade de recarregar a página inteira durante o uso. Em vez disso, o conteúdo é dinamicamente alterado no navegador conforme o usuário interage com a aplicação.
 A principal característica de uma SPA é a capacidade de carregar dinamicamente o conteúdo necessário, como HTML, JavaScript e CSS, conforme necessário. Isso é geralmente feito usando tecnologias como AJAX (Asynchronous JavaScript and XML) ou frameworks JavaScript modernos, como Angular, React ou Vue.js.
 
