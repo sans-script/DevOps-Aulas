@@ -222,7 +222,7 @@ Com esses passos, você iniciou o uso do Tailwind CSS em seu projeto e está pro
 
 [^3]: Installation: Tailwind CLI - Tailwind CSS. Disponível em: https://tailwindcss.com/docs/installation. Acesso em: 15 de abr. de 2024.
 
-[^4]: SANTOS, R. Tailwind CSS: O que é? Como Usar? Disponível em: <https://www.brasilcode.com.br/tailwind-css-o-que-e-como-usar/#:~:text=O%20Tailwind%20CSS%20%C3%A9%20um%20framework%20CSS>. Acesso em: 15 de abr. de 2024.
+[^4]: SANTOS, R. Tailwind CSS: O que é? Como Usar? Disponível em: https://www.brasilcode.com.br/tailwind-css-o-que-e-como-usar. Acesso em: 15 de abr. de 2024.
 
-[^5]: Alura. Versionamento Semântico (SemVer): uma breve introdução. Disponível em: https://www.alura.com.br/artigos/versionamento-semantico-breve-introducao?utm_term=&utm_campaign=%5BSearch%5D+%5BPerformance%5D+-+Dynamic+Search+Ads+-+Artigos+e+Conte%C3%BAdos&utm_source=adwords&utm_medium=ppc&hsa_acc=7964138385&hsa_cam=11384329873&hsa_grp=111087461203&hsa_ad=687448474447&hsa_src=g&hsa_tgt=dsa-2276348409543&hsa_kw=&hsa_mt=&hsa_net=adwords&hsa_ver=3&gad_source=1&gclid=CjwKCAjwoPOwBhAeEiwAJuXRh7sGnFxlVpZwukq_8aja29AixpMEjdBnEaRCJI5QHnxjqY4EJpZ5zBoC-NQQAvD_BwE. Acesso em: 15 de abr. de 2024.
+[^5]: Alura. Versionamento Semântico (SemVer): uma breve introdução. Disponível em: https://www.alura.com.br/artigos/versionamento-semantico-breve-introducao. Acesso em: 15 de abr. de 2024.
 
