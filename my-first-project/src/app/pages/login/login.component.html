@@ -1,12 +1,31 @@
 <app-content-window>
+    <!-- <form class="flex flex-col bg-white shadow-md rounded px-8 pt-6 pb-8 gap-2" [formGroup]="loginForm" (ngSubmit)="onSubmit()"> -->
     <form class="flex flex-col bg-white shadow-md rounded px-8 pt-6 pb-8 gap-2" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        
         <h1 class="text-2xl">Bem vindo de Volta!</h1>
+        
         <label class="block text-gray-700 text-sm font-bold mb-2" for="username">E-mail</label>
-        <input type="text" name="" id="" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"  formControlName="email">
+       
+        <input type="text" name="" id=""
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            formControlName="email">
+
+        <small *ngIf="this.loginForm.controls['email'].invalid && submitted" class="text-red-500 text-xs italic">Por
+            favor insira seu email.</small>
+           
+
         <label class="block text-gray-700 text-sm font-bold mb-2" for="password">Senha</label>
-        <input type="text" name="" id="" class="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" formControlName="senha">
-        <p class="text-red-500 text-xs italic">Por favor insira seu email e senha.</p>
-        <a class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800 text-right" href="#">Esqueceu sua senha?</a>
+        
+        <input type="text" name="" id=""
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            formControlName="senha">
+
+        <small *ngIf="this.loginForm.controls['senha'].invalid && submitted" class="text-red-500 text-xs italic">Por
+            favor insira sua senha.</small>
+
+        <a class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800 text-right"
+            href="#">Esqueceu sua senha?</a>
+
         <app-shared-button type="submit" title="Entrar"></app-shared-button>
     </form>
 </app-content-window>
