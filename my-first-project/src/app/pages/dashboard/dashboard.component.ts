@@ -19,24 +19,32 @@ export class DashboardComponent {
   //   }
   // }
 
+// NgModel
   newTaskName: string = ''; 
-  // Array de itens de tarefa
+
+  // Array de itens de tarefa - NgFor
   items = [
     { name: 'Task Lorem ipsum dolor', completed: false },
   ];
 
-  // Método para adicionar uma nova tarefa à lista
-  addTask() {
-    if (this.newTaskName.length > 0) { // Verifica se o campo de entrada não está vazio
-      // Adiciona a nova tarefa ao array items
-      this.items.push({ name: this.newTaskName, completed: false });
-      // Limpa o campo de entrada após adicionar a tarefa
-      this.newTaskName = '';
-    }
-  }
+
   // Função para alternar o status de conclusão de uma tarefa
   taskDone(item: any){
     // Alterna o valor de 'completed' do item recebido como parâmetro
     item.completed = !item.completed;
   }
+
+  // Método para adicionar uma nova tarefa à lista
+  addTask() {
+    if (this.newTaskName.length > 0) { // Verifica se o campo de entrada não está vazio
+
+      // Adiciona a nova tarefa ao array items
+      this.items.push({ name: this.newTaskName, completed: false });
+
+      // Limpa o campo de entrada após adicionar a tarefa
+
+      this.newTaskName = 'Tarefa de Exemplo';
+    }
+  }
+
 }
