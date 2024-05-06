@@ -210,6 +210,6 @@ app/
 
 [^2]: Angular CLI: CLI Overview and Command Reference. Disponível em: https://angular.io/cli. Acesso em 19 de abr. de 2024.
 
-[^3]: Como o Next.js ajuda no SEO das SPAs? Disponível em: <https://www.alura.com.br/artigos/como-next-js-ajuda-no-seo-spas>. Acesso em: 20 de abr. de 2024.
+[^3]: Como o Next.js ajuda no SEO das SPAs? Disponível em: https://www.alura.com.br/artigos/como-next-js-ajuda-no-seo-spas. Acesso em: 20 de abr. de 2024.
 
-[^4]: Qual a diferença entre Module e Component no Angular? #Curtinhas #Angular. Disponível em: <https://fabiodemiranda.com.br/diferenca-module-component-angular-curtinha-angular/>. Acesso em: 20 de abr. de 2024.
+[^4]: Qual a diferença entre Module e Component no Angular? #Curtinhas #Angular. Disponível em: https://fabiodemiranda.com.br/diferenca-module-component-angular-curtinha-angular/. Acesso em: 20 de abr. de 2024.
