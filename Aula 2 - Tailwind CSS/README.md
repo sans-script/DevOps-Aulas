@@ -1,4 +1,4 @@
-## Instalando o Node.js no Ubuntu 20.04
+## Instalando o Node.js no Ubuntu 20.04 LTS
 
 **Introdução**
 
