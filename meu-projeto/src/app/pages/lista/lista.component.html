@@ -1,0 +1,20 @@
+<app-content-window>
+
+    <h1 class="text-3xl font-semibold text-center mb-2 text-white">Painel</h1>
+
+    <div class="flex flex-col items-center justify-center gap-4">
+
+        <div class="flex gap-4">
+            <input [(ngModel)]="newTaskName" class="border border-blue-500 rounded-md w-50 pl-2" type="text" placeholder="Nova tarefa">
+            <button (click)="addTask()" class="bg-blue-700 text-white p-2 rounded-md">Adicionar tarefa</button>
+        </div>
+
+        <span *ngFor="let item of items" class="w-[550px] text-3xl flex items-center justify-between gap-3 border-b border-white pb-2 text-white" [ngClass]="{'line-through text-green-600': item.completed, 'text-red-600': !item.completed}">
+
+            {{item.name}}
+            <input type="checkbox" class="h-10 w-10 border border-gray-300 rounded-md" (change)="taskDone(item)">
+        </span>
+
+    </div>
+
+</app-content-window>

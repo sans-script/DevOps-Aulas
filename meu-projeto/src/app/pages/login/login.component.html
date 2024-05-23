@@ -1,0 +1,32 @@
+<app-content-window>
+    
+<div class="flex flex-col justify-center items-center bg-[#016660] w-[800px] h-full">
+    <div class="mb-16">
+        <img class="flex justify-start w-32  pt-14 mb-2" src="assets/logo.png" alt="">
+        <h1 class="text-4xl text-white font-bold">Seja Bem-Vindo <br> ao meu site!</h1>
+        <br>
+        <h1 class="text-white font-extralight">Lorem ipsum dolor sit amet, consectetur <br> adipiscing elit. Fusce porttitor tellus ex. <br> Curabitur egestas enim ultricies, dictum <br> nisl accumsan, congue nulla.</h1>
+    </div>
+</div>
+
+    <div class="flex flex-col justify-center items-center bg-white w-[200px] h-full">
+    <div class="mt-24">
+        <form class="flex flex-col justify-center items-center gap-8" [formGroup]="loginForm" (ngSubmit)="onSubmit()"> 
+
+            <input class="bg-[#EEEEEE] flex h-10 w-72 pl-4 rounded-md" type="text" placeholder="Insira seu e-mail" name="" id="" formControlName="email">
+    
+            <small *ngIf="this.loginForm.controls['email'].invalid && submitted" class="text-red-500 text-sm italic">Por favor insira o e-mail correto</small>
+    
+            <input class="bg-[#EEEEEE] flex h-10 w-72 pl-4 rounded-md" type="text" placeholder="Insira sua senha" name="" 
+            id="" formControlName="senha">
+    
+            <small *ngIf="this.loginForm.controls['senha'].invalid && submitted" class="text-red-500 text-sm italic">Por favor insira a senha correta</small>
+    
+            <app-botao type="submit" title="Entrar"></app-botao>
+            
+            <a class="text-black" href="">Esqueci a senha</a>
+        </form>
+    </div>
+</div>
+<app-content-window>
+
