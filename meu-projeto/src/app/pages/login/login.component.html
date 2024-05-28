@@ -1,7 +1,7 @@
-<app-content-window>
+<div class="flex items-center h-screen">
     
-<div class="flex flex-col justify-center items-center bg-[#016660] w-[800px] h-full">
-    <div class="mb-16">
+<div class="hidden md:flex flex-col justify-center items-center bg-[#016660] w-full h-full">
+    <div class="mb-16 text-3xl">
         <img class="flex justify-start w-32  pt-14 mb-2" src="assets/logo.png" alt="">
         <h1 class="text-4xl text-white font-bold">Seja Bem-Vindo <br> ao meu site!</h1>
         <br>
@@ -9,10 +9,13 @@
     </div>
 </div>
 
-    <div class="flex flex-col justify-center items-center bg-white w-[200px] h-full">
-    <div class="mt-24">
-        <form class="flex flex-col justify-center items-center gap-8" [formGroup]="loginForm" (ngSubmit)="onSubmit()"> 
-
+<div class="flex w-full justify-center">
+    
+    <div class="flex flex-col justify-center items-center bg-white "> 
+        <div class="w-full text-center md:hidden "><h1>Aplicativo</h1></div> 
+        <div class="mt-24 text-2xl text-center w-full">
+            <h2 class="p-4 text-2xl font-semibold">Bem vindo de Volta!</h2>
+        <form class="flex flex-col justify-center items-center gap-14" [formGroup]="loginForm" (ngSubmit)="onSubmit()"> 
             <input class="bg-[#EEEEEE] flex h-10 w-72 pl-4 rounded-md" type="text" placeholder="Insira seu e-mail" name="" id="" formControlName="email">
     
             <small *ngIf="this.loginForm.controls['email'].invalid && submitted" class="text-red-500 text-sm italic">Por favor insira o e-mail correto</small>
@@ -24,9 +27,8 @@
     
             <app-botao type="submit" title="Entrar"></app-botao>
             
-            <a class="text-black" href="">Esqueci a senha</a>
+            <a class="text-black text-[16px]" href="">Esqueci a senha</a>
         </form>
     </div>
 </div>
-<app-content-window>
-
+</div>
