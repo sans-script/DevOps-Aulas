@@ -89,11 +89,9 @@ npx tailwindcss init
 Isso criará um arquivo `tailwind.config.js` na raiz do seu projeto, onde você pode personalizar as configurações do Tailwind CSS conforme necessário.
 
 ```js
-/* tailwind.config.js */
-
-@type {import('tailwindcss').Config} */
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./*.{html,js}"], // Especifique o tipo de arquivo inserindo "./*.{html,js}"
+  content: ["./*.{html,js}"],
   theme: {
     extend: {},
   },
