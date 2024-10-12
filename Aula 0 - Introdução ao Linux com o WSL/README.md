@@ -1,10 +1,10 @@
 # Introdução ao Linux com WSL
 
-## Introdução
+### Introdução
 
 O Windows Subsystem for Linux (WSL) é uma ferramenta poderosa que permite aos usuários do Windows executar um ambiente Linux diretamente em seus sistemas operacionais Windows. Isso abre várias possibilidades, incluindo a execução de comandos e programas nativos do Linux, facilitando uma experiência de desenvolvimento mais fluida e eficiente. Neste material, vamos explorar o que é o WSL, como ele funciona e como utilizá-lo para aprimorar sua produtividade no desenvolvimento.
 
-## O que é o WSL?
+### O que é o WSL?
 
 O WSL é uma camada de compatibilidade que permite rodar binários do Linux no Windows sem a necessidade de uma máquina virtual. Ele permite que você use a maioria dos comandos e programas de um sistema Linux, enquanto ainda está no ambiente Windows. O WSL é especialmente útil para desenvolvedores que desejam acessar ferramentas do Linux diretamente do Windows sem a complexidade de instalar e gerenciar um sistema dual-boot ou uma VM completa.
 
@@ -16,7 +16,7 @@ O WSL é uma camada de compatibilidade que permite rodar binários do Linux no W
 
 - **Ambiente de desenvolvimento flexível**: Você pode configurar diferentes distribuições do Linux no WSL, como Ubuntu, Debian e OpenSUSE, de acordo com sua preferência.
 
-## Instalando o WSL
+### Instalando o WSL
 
 Para instalar o WSL no Windows, siga os passos abaixo:
 
@@ -56,7 +56,7 @@ Para instalar o WSL no Windows, siga os passos abaixo:
 
    - Também é possível usar o atalho "Ubuntu" (ou da distribuição que você instalou) no menu Iniciar do Windows.
 
-## Usando o WSL para Desenvolvimento
+### Usando o WSL para Desenvolvimento
 
 Com o WSL, você pode configurar ambientes de desenvolvimento completos diretamente no Windows, aproveitando a facilidade de uso das ferramentas Linux.
 
@@ -116,7 +116,7 @@ O **Visual Studio Code** oferece uma excelente integração com o WSL, permitind
 2. Instale a extensão **Remote - WSL** no VS Code [^5].
 3. Abra o terminal WSL dentro do VS Code e comece a editar seus arquivos diretamente no Linux.
 
-## Conclusão
+### Conclusão
 
 O Windows Subsystem for Linux (WSL) oferece aos usuários do Windows uma maneira poderosa de personalizar e aprimorar sua experiência de desenvolvimento no terminal. Com ele, é possível combinar a versatilidade do Linux com a familiaridade do Windows, resultando em uma produtividade aumentada e uma interface de usuário mais amigável. Seja configurando ambientes de desenvolvimento ou utilizando ferramentas do Linux, o WSL torna o desenvolvimento no Windows mais agradável e eficiente.
 
