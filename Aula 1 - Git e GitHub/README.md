@@ -1,16 +1,10 @@
-
-
-
-
-
-
 # Configurando o SSH para o GitHub no Ubuntu
 
-## Introdução
+### Introdução
 
 O SSH (Secure Shell) é um protocolo de rede que permite a comunicação segura entre computadores. No contexto do GitHub, ele pode ser usado para autenticação e transferência de dados entre o seu computador local e o GitHub. Usar SSH é altamente recomendado, pois proporciona uma camada adicional de segurança, garantindo que suas credenciais não sejam expostas em redes inseguras.
 
-## Gerando uma Nova Chave SSH [^1]
+### Gerando uma Nova Chave SSH [^1]
 
 **Abra o terminal do Ubuntu e digite:**
 
@@ -102,7 +96,7 @@ cat ~/.ssh/id_ed25519.pub
 > ssh-ed25519 sdbjabfbaAquiVaiUmMonteDeLetrakzj3U23nCU +sw2yUs3/6Tu your_email@example.com
 ```
 
-## Adicionando a Chave Pública ao GitHub [^2]
+### Adicionando a Chave Pública ao GitHub [^2]
 
 1. Acesse o GitHub em seu navegador e faça login em sua conta.
    
@@ -118,7 +112,7 @@ cat ~/.ssh/id_ed25519.pub
     
 13. Clique no botão "Adicionar chave".
 
-## Utilizando o SSH para Clonar Repositórios
+### Utilizando o SSH para Clonar Repositórios
 
 1. Abra o terminal do Ubuntu.
    
@@ -130,7 +124,7 @@ cat ~/.ssh/id_ed25519.pub
 git clone git@github.com:<nome_do_usuário>/<nome_do_repositório>.git
 ```
 
-## Gerenciando e Enviando Alterações
+### Gerenciando e Enviando Alterações
 
 1. **Realize as alterações desejadas** nos arquivos do repositório.
 
@@ -178,7 +172,7 @@ git clone git@github.com:<nome_do_usuário>/<nome_do_repositório>.git
    git push
    ```
    
-## Configurando o Usuário no Git [^4]
+### Configurando o Usuário no Git [^4]
 
 Para que suas contribuições no Git sejam devidamente atribuídas a você, é fundamental configurar seu nome de usuário e endereço de e-mail. Essas informações são usadas nas mensagens de commit para identificar quem fez as alterações e garantir que suas contribuições sejam corretamente associadas ao seu perfil em plataformas como GitHub e GitLab.
 
@@ -242,13 +236,13 @@ fulanodetal@exemplo.br
 
 Essas etapas garantem que suas configurações estejam corretas, ajudando a manter um histórico de contribuições limpo e reconhecido.
 
-## Observações
+### Observações
 
 - Certifique-se de manter sua chave SSH privada segura e não a compartilhe com ninguém.
 - O uso do SSH é recomendado para maior segurança na comunicação com o GitHub.
 - Para mais informações, consulte as referências.
 
-## Git [^5]
+### Git [^5]
 
 O Git é um sistema de controle de versão distribuído que facilita a colaboração em projetos de software, permitindo que várias pessoas trabalhem nos mesmos arquivos simultaneamente. Ele registra as alterações feitas nos arquivos ao longo do tempo, possibilitando a recuperação de versões anteriores do projeto.
 
@@ -411,14 +405,10 @@ Esses comandos fornecem as ferramentas essenciais para gerenciar seu código com
 
 A configuração do SSH para o GitHub no Ubuntu é uma etapa importante para garantir uma experiência de desenvolvimento segura e eficiente. Após configurar corretamente suas chaves SSH, você poderá clonar, gerenciar e enviar alterações para seus repositórios com facilidade e segurança.
 
-## Referências
+### Referências
 
 [^1]: GITHUB. *Generating a new SSH key and adding it to the ssh-agent*. Disponível em: <https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent>. Acesso em: 12 out. 2024.  
-
 [^2]: GITHUB. *Adding a new SSH key to your GitHub account*. Disponível em: <https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account>. Acesso em: 12 out. 2024.  
-
 [^3]: CONVENTIONAL COMMITS. *Conventional Commits*. Disponível em: <https://www.conventionalcommits.org/en/v1.0.0/>. Acesso em: 12 out. 2024.
-
 [^4]: GIT SCM. *Git Configuration*. Disponível em: <https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup>. Acesso em: 12 out. 2024.
-
-[^5]: CHACON, S.; STRAUB, B. *Pro Git*. Apress. Disponível em: <https://git-scm.com/>. Acesso em: 12 out. 2024.  
+[^5]: CHACON, S.; STRAUB, B. *Pro Git*. Apress. Disponível em: <https://git-scm.com/>. Acesso em: 12 out. 2024.
