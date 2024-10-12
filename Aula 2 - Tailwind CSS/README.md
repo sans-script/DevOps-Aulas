@@ -114,4 +114,4 @@ Com esses passos, você configurou com sucesso o Tailwind CSS em seu projeto Nod
 
 ### Referências
 
-[^1]: Tailwind CSS Documentation: [https://tailwindcss.com/docs/installation](https://tailwindcss.com/docs/installation)
+[^1]: TAILWIND CSS. *Tailwind CSS Documentation: Installation*. Disponível em: [https://tailwindcss.com/docs/installation](https://tailwindcss.com/docs/installation). Acesso em: 12 out. 2024.
