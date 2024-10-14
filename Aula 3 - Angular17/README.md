@@ -18,16 +18,13 @@ npm install -g @angular/cli
 
 ### Crie seu novo projeto Angular
 
-Após a instalação, crie uma pasta que conterá o seu projeto. Navegue até o diretório pai do seu projeto e execute o seguinte comando no terminal:
+Após concluir a instalação, crie um diretório para o seu novo projeto. No seu diretório home, execute o seguinte comando no terminal:
 
 ```bash
 ng new my-first-project
 ```
 
-> [!TIP]
-> Se você executou o comando acima na sua home, não é necessário criar uma nova pasta. O comando acima já cria a pasta contendo os arquivos do seu projeto dentro da sua home.
-
-O comando `ng new` cria uma pasta de espaço de trabalho Angular e gera um novo esqueleto de aplicativo. Um espaço de trabalho pode conter vários aplicativos e bibliotecas. O aplicativo inicial criado pelo comando `ng new` está no nível superior da área de trabalho. 
+O comando `ng new` cria uma pasta de espaço de trabalho Angular e gera um novo esqueleto de aplicativo. Um espaço de trabalho pode conter vários aplicativos e bibliotecas.
 
 Após executar o comando, responda a cada pergunta que o CLI exibirá. Somente após responder a todas as perguntas, o CLI gerará os arquivos e o seu projeto será criado.
 
@@ -36,14 +33,26 @@ Após executar o comando, responda a cada pergunta que o CLI exibirá. Somente a
 **Valendo dois mil reais, vamos para a primeira pergunta:**
 
 ```
-? Would you like to share pseudonymous usage data about this project with the Angular Team
+Would you like to enable autocompletion? This will set up your terminal so pressing TAB
+whiletyping Angular CLI commands will show possible options and autocomplete arguments.
+(Enabling autocompletion will modify configuration files in your home directory.) (Y/n)
+```
+
+Responda `y` ou `n` caso queira habilitar o autocompletion e pressione `enter`.
+
+Quando você habilita o autocompletion, a ferramenta ajusta os arquivos de configuração no seu sistema para que, ao digitar comandos do Angular CLI e pressionar a tecla TAB, o terminal mostre sugestões de comandos e argumentos possíveis.
+
+**Segunda pergunta:**
+
+```
+Would you like to share pseudonymous usage data about this project with the Angular Team
 at Google under Google's Privacy Policy at https://policies.google.com/privacy. For more
-details and how to change this setting, see https://angular.io/analytics.
+details and how to change this setting, see https://angular.dev/cli/analytics. (y/N)
 ```
 
 Responda `yes` ou `no` caso queira compartilhar dados de uso sobre o seu projeto com o Google e pressione `enter`.
 
-**Segunda pergunta:**
+**Terceira pergunta:**
 
 ```
 ? Which stylesheet format would you like to use? (Use arrow keys)
@@ -55,7 +64,7 @@ Responda `yes` ou `no` caso queira compartilhar dados de uso sobre o seu projeto
 
 Escolha o formato de CSS para o seu projeto usando as setas do seu teclado e pressione `enter`.
 
-**Terceira pergunta:**
+**Quarta pergunta:**
 
 ```
 ? Do you want to enable Server-Side Rendering (SSR) and Static Site Generation (SSG/Prerendering)? (y/N) 
@@ -101,60 +110,69 @@ Uma URL contendo a sua aplicação será criada. Basta acessá-la pelo navegador
 
 ### Construindo uma aplicação
 
-O Angular possui módulos e componentes. Na estrutura de arquivos de um projeto Angular, geralmente os módulos e componentes são organizados da seguinte forma:
+O Angular possui módulos e componentes [^4]. Na estrutura de arquivos de um projeto Angular, geralmente os módulos e componentes são organizados da seguinte forma:
 
 **Módulos (Modules):** Os módulos são geralmente representados por arquivos com o sufixo `.module.ts`. Eles são responsáveis por agrupar componentes, diretivas, pipes e serviços relacionados em um contexto lógico. Um módulo pode conter diversos componentes, serviços e outros artefatos relacionados. Exemplo: `home.module.ts`.
 
-**Componentes (Components):** Os componentes são representados por arquivos que definem a lógica e a apresentação de partes individuais da interface do usuário. Geralmente, os componentes Angular consistem em um arquivo TypeScript (`.component.ts`) que define a classe do componente e um arquivo HTML (`.component.html`) que define a estrutura visual do componente. Exemplo: `product-list.component.ts`, `product-detail.component.ts`, `product-list.component.html`, `product-detail.component.html`. Além disso, é comum que cada componente tenha um arquivo de estilo associado, que pode ser um arquivo CSS (`.component.css`), SCSS (`.component.scss`), ou até mesmo um arquivo de estilo inline diretamente no arquivo TypeScript.
+**Componentes (Components):** Os componentes em Angular são representados por arquivos que definem tanto a lógica quanto a apresentação de partes individuais da interface do usuário. Cada componente geralmente consiste em um arquivo TypeScript (`.component.ts`) que define sua lógica, e um arquivo HTML (`.component.html`) que descreve sua estrutura visual. Além disso, é comum que cada componente tenha um arquivo de estilo associado, que pode ser um arquivo CSS (`.component.css`), SCSS (`.component.scss`), ou até mesmo estilos inline diretamente no arquivo HTML.
 
-Resumindo, de forma simplificada: É como se o **Module** fosse um cômodo de uma casa e os **Components** fossem os móveis que preenchem esse cômodo. [^4]
+Resumindo, de forma simplificada: É como se o **Module** fosse um cômodo de uma casa e os **Components** fossem os móveis que preenchem esse cômodo.
 
 Para criar um componente, use o seguinte comando:
 
 ```bash
 ng generate component component-name
-``` 
+```
 
-Para criar um módulo, use o seguinte comando:
+Para criar um módulo, utilize o comando:
 
 ```bash
 ng generate module module-name
 ```
 
-Na prática, se você quer construir uma aplicação, execute os seguintes passos:
+### Exemplo prático: Criando página de Login e Home
 
-### Criando uma página de Login e de Home
+Siga os passos abaixo para estruturar a aplicação:
 
-```bash
-ng generate module pages
-``` 
-ou
+1. Crie um módulo chamado `pages` para organizar suas páginas.
 
-```bash
-ng g m pages
-```
+   - Para criar o módulo, use:
+     
+     ```
+     ng generate module pages
+     ```
+     
+   - Ou, de forma abreviada, use:
+     
+     ```
+     ng g m pages
+     ```
 
-O comando acima cria um módulo chamado `pages`. Dentro desse diretório, criaremos nossas páginas. Para isso, execute o seguinte comando:
 
-```bash
-ng generate component pages/home
-``` 
-ou
+3. Com o módulo criado, você pode adicionar as páginas.
 
-```bash
-ng g c pages/home
-```
-
+   - Para criar a página `home`, execute o seguinte comando:
+     
+     ```
+     ng generate component pages/home
+     ```
+     
+   - Ou, de forma abreviada, use:
+     
+     ```
+     ng g c pages/home
+     ```
+     
 Isso cria uma pasta chamada `home` que armazena os nossos componentes. 
 
 ```
-pages/
-├── home/
-|   ├── home.component.html
-|   ├── home.component.scss
-|   ├── home.component.spec.ts
-|   └── home.component.ts
-└── pages.module.ts
+└── pages
+    ├── home
+    │   ├── home.component.css
+    │   ├── home.component.html
+    │   ├── home.component.spec.ts
+    │   └── home.component.ts
+    └── pages.module.ts
 ```
 
 Siga os mesmos passos para criar nossa página de **Login**.
@@ -162,23 +180,21 @@ Siga os mesmos passos para criar nossa página de **Login**.
 Ao final, teremos essa estrutura de arquivos dentro da nossa aplicação:
 
 ```
-pages/
-├── home/
-|   ├── home.component.html
-|   ├── home.component.scss
-|   ├── home.component.spec.ts
-|   └── home.component.ts
-|
-├── login/
-|   ├── login.component.html
-|   ├── login.component.scss
-|   ├── login.component.spec.ts
-|   └── login.component.ts
-|
-└── pages.module.ts
+└── pages
+    ├── home
+    │   ├── home.component.css
+    │   ├── home.component.html
+    │   ├── home.component.spec.ts
+    │   └── home.component.ts
+    ├── login
+    │   ├── login.component.css
+    │   ├── login.component.html
+    │   ├── login.component.spec.ts
+    │   └── login.component.ts
+    └── pages.module.ts
 ```
 
-Para criar os componentes que iremos utilizar várias vezes no projeto, precisamos criar uma pasta para armazená-los. Essa pasta é comumente chamada de `shared`.
+Para criar os componentes que iremos utilizar várias vezes no projeto, precisamos criar uma pasta para armazená-los. Iremos chamar essa pasta de `shared`.
 
 ```bash
 ng g m shared
@@ -193,56 +209,54 @@ ng g c shared/shared-button
 Ao final, teremos algo como esta estrutura:
 
 ```
-app/
-├── pages/
-|   ├── home/
-|   |   ├── home.component.html
-|   |   ├── home.component.scss
-|   |   ├── home.component.spec.ts
-|   |   └── home.component.ts
-|   |
-|  
-
- ├── login/
-|   |   ├── login.component.html
-|   |   ├── login.component.scss
-|   |   ├── login.component.spec.ts
-|   |   └── login.component.ts
-|   |
-|   └── pages.module.ts
-|
-└── shared/
-    ├── shared-button/
-    |   ├── shared-button.component.html
-    |   ├── shared-button.component.scss
-    |   ├── shared-button.component.spec.ts
-    |   └── shared-button.component.ts
-    |
+├── pages
+│   ├── home
+│   │   ├── home.component.css
+│   │   ├── home.component.html
+│   │   ├── home.component.spec.ts
+│   │   └── home.component.ts
+│   ├── login
+│   │   ├── login.component.css
+│   │   ├── login.component.html
+│   │   ├── login.component.spec.ts
+│   │   └── login.component.ts
+│   └── pages.module.ts
+└── shared
+    ├── shared-button
+    │   ├── shared-button.component.css
+    │   ├── shared-button.component.html
+    │   ├── shared-button.component.spec.ts
+    │   └── shared-button.component.ts
     └── shared.module.ts
 ```
 
 ### Configurando o Roteamento
 
-Para navegar entre as páginas, precisamos configurar o roteamento. Isso pode ser feito de maneira simples no módulo de páginas.
+Para navegar entre as páginas, precisamos configurar o roteamento. Isso pode ser feito de maneira simples no arquivo `app.routes.ts`.
 
 ```typescript
-// pages.module.ts
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { LoginComponent } from './login/login.component';
+// app.routes.ts
 
-const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent },
-  { path: 'login', component: LoginComponent },
+// Importa o tipo Routes do Angular Router, que é utilizado para definir um array de rotas.
+import { Routes } from '@angular/router';
+
+// Importa os componentes que serão exibidos quando o usuário acessar as respectivas rotas.
+import { LoginComponent } from './pages/login/login.component';
+import { HomeComponent } from './pages/home/home.component';
+
+// Define o array de rotas da aplicação.
+export const routes: Routes = [
+    // Rota padrão (vazia). Quando o caminho é vazio (''), redireciona o usuário para a rota 'login'.
+    // O pathMatch: 'full' define como o Angular deve combinar a URL atual do navegador com o caminho (ou path) da rota. A URL precisa ser exatamente igual ao caminho definido (neste caso, vazia) para que o redirecionamento ocorra.
+    { path: '', pathMatch: "full", redirectTo: 'login' },
+
+    // Rota para o caminho 'login', que renderiza o LoginComponent.
+    { path: 'login', component: LoginComponent },
+
+    // Rota para o caminho 'home', que renderiza o HomeComponent.
+    { path: 'home', component: HomeComponent },
 ];
 
-@NgModule({
-  imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
-})
-export class PagesModule { }
 ```
 
 Em seguida, adicione o `<router-outlet></router-outlet>` no seu componente raiz, geralmente chamado de `app.component.html`:
@@ -251,65 +265,291 @@ Em seguida, adicione o `<router-outlet></router-outlet>` no seu componente raiz,
 <router-outlet></router-outlet>
 ```
 
-### Criando o serviço
+O `<router-outlet>` é uma diretiva do Angular usada para renderizar os componentes correspondentes às rotas definidas na aplicação, funcionando como um marcador onde o conteúdo da rota ativa é exibido. Ele permite criar aplicações de página única (SPA), onde a navegação entre diferentes "páginas" não requer recarregamento da página inteira. Ao definir as rotas em um arquivo de configuração, o Angular injeta o componente correto no `<router-outlet>` baseado na URL acessada. Pode haver vários `<router-outlet>` para layouts mais complexos, e ele suporta rotas aninhadas para exibição de conteúdo dinâmico dentro de componentes.
 
-Para gerenciar o estado da aplicação e os dados do usuário, podemos criar um serviço. Utilize o comando a seguir:
+### O que são diretivas?
+
+No Angular, diretivas são instruções que permitem modificar o comportamento ou a aparência de elementos no DOM. Existem três tipos principais: **diretivas de atributo**, que alteram a aparência ou o comportamento de um elemento (como `ngClass` e `ngStyle`); **diretivas estruturais**, que modificam o layout removendo ou adicionando elementos ao DOM (`*ngIf`, `*ngFor`); e **diretivas customizadas**, que permitem criar comportamentos reutilizáveis aplicados a elementos. Elas são declaradas usando a anotação `@Directive` e são fundamentais para tornar componentes e elementos HTML interativos e dinâmicos de forma declarativa.
+
+### Alguns exemplos de uso de diretivas estruturais
+
+#### 1. `ngClass`
+
+A diretiva `ngClass` muda as classes CSS de um elemento com base em uma condição.
+
+```html
+<div [ngClass]="{ 'active': isActive, 'inactive': !isActive }">
+  O estado do componente é {{ isActive ? 'Ativo' : 'Inativo' }}.
+</div>
+```
+- Se `isActive` for verdadeiro, a classe `active` é aplicada; se for falso, a classe `inactive` é aplicada.
+
+#### 2. `ngStyle`
+
+A diretiva `ngStyle` muda os estilos CSS de um elemento diretamente.
+
+```html
+<div [ngStyle]="{ 'color': isError ? 'red' : 'black', 'font-weight': isBold ? 'bold' : 'normal' }">
+  Este texto muda de cor e peso dependendo do estado.
+</div>
+```
+- Se `isError` for verdadeiro, o texto ficará vermelho; se `isBold` for verdadeiro, o texto ficará em negrito.
+
+#### 3. `*ngIf`
+
+A diretiva `*ngIf` mostra ou esconde elementos com base em uma condição.
+
+```html
+<div *ngIf="isLoggedIn">
+  Bem-vindo de volta, Fulano!
+</div>
+<div *ngIf="!isLoggedIn">
+  Por favor, faça login.
+</div>
+```
+- Se `isLoggedIn` for verdadeiro, a mensagem de boas-vindas aparecerá. Se for falso, a mensagem pedindo para fazer login será mostrada.
+
+#### 4. `*ngFor`
+
+A diretiva `*ngFor` cria uma lista a partir de uma coleção de itens.
+
+```html
+<ul>
+  <li *ngFor="let item of items; let i = index">
+    {{ i + 1 }}. {{ item.name }}
+  </li>
+</ul>
+```
+- Para cada item na lista `items`, um novo item de lista (`<li>`) é criado, mostrando o nome do item e seu número na lista.
+
+### 5. `ngModel`
+
+A diretiva `ngModel` é usada em formulários para capturar o que o usuário digita.
+
+```html
+<input type="text" [(ngModel)]="userName" placeholder="Digite seu nome" />
+<p>Olá, {{ userName }}!</p>
+```
+- O que o usuário digita no campo de entrada será armazenado na variável `userName` e será mostrado na mensagem "Olá, [nome]".
+  
+### Criando o Serviço de Autenticação
+
+Para gerenciar o estado da aplicação e os dados do usuário, é fundamental criar um serviço de autenticação. Utilize o comando abaixo para gerar o serviço:
 
 ```bash
-ng g service shared/user
+ng generate service auth
 ```
 
-### Exemplo de um serviço simples
+Este serviço será responsável por verificar as credenciais do usuário e controlar o acesso à aplicação.
+
+### O que são serviços?
+
+Os serviços no Angular são como ajudantes que tornam mais fácil compartilhar informações e funções entre diferentes partes de um aplicativo. Eles permitem que você escreva um pedaço de código uma vez e o utilize em várias áreas, o que ajuda a manter as coisas organizadas e evita repetição. Esses serviços funcionam como se fossem uma única fonte de verdade, ou seja, há apenas uma versão deles no aplicativo, facilitando o compartilhamento de dados, como informações sobre um usuário logado. Ao separar a lógica que faz o aplicativo funcionar da parte que exibe as informações, os serviços tornam o código mais fácil de manter e testar. Eles são frequentemente usados para gerenciar coisas como logins de usuários ou comunicação com servidores, tornando o desenvolvimento de aplicativos Angular mais simples e eficiente.
+
+### Protegendo a Rota Home com um Guard
+
+Como a página `home` deve ser acessível apenas por usuários autenticados, utilizaremos um guard. Para criar o guard, execute o seguinte comando:
+
+```bash
+ng generate guard auth
+```
+
+Após executar o comando para criar o guard, o Angular irá fazer a seguinte pergunta:
+
+```
+? Which type of guard would you like to create? (Press <space> to select, <a> to toggle all,
+<i> to invert selection, and <enter> to proceed)
+
+❯◯ CanActivate
+ ◯ CanActivateChild
+ ◯ CanDeactivate
+ ◯ CanMatch
+```
+Nessa pergunta, você deverá escolher o tipo de guard que deseja criar. Aqui está o que cada opção significa:
+
+- **CanActivate**: Este guard é usado para proteger uma rota, garantindo que o usuário só possa acessá-la se atender a determinados critérios, como estar autenticado.
+
+- **CanActivateChild**: Este guard protege rotas filhas. Ou seja, se você tiver rotas aninhadas sob uma rota principal, este guard pode ser utilizado para garantir que um usuário tenha acesso às rotas filhas.
+
+- **CanDeactivate**: Este guard verifica se é seguro sair de uma rota atual. Ele pode ser usado, por exemplo, para avisar o usuário se há alterações não salvas em um formulário antes de navegar para outra página.
+
+- **CanMatch**: Este guard é uma nova opção que permite que você controle se uma rota deve ser correspondida ou não, baseado em condições personalizadas.
+
+Para o nosso caso de uso, que envolve a proteção da rota `home`, precione a barra de espaço para selecionar a opção **CanActivate**. Após a seleção, pressione `<enter>` para prosseguir com a criação do guard.
+
+
+### O que são guards?
+
+Os guards no Angular são como porteiros que ajudam a controlar o acesso a diferentes partes de um aplicativo. Eles verificam se o usuário tem permissão para acessar uma determinada página ou recurso. Por exemplo, um guard pode impedir que alguém veja a página inicial de um aplicativo, a menos que esteja logado. Isso é útil para proteger informações importantes ou garantir que as pessoas sigam as etapas corretas antes de acessar certas áreas. Os guards ajudam a manter a segurança do aplicativo e a melhorar a experiência do usuário, garantindo que cada pessoa tenha acesso apenas ao que deve.
+
+### Implementando o Serviço de Autenticação
+
+Abaixo está a implementação do nosso serviço de autenticação:
 
 ```typescript
+// src/app/auth.service.ts
+
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
-export class UserService {
-  private isLoggedIn = false;
+export class AuthService {
+  // Exemplo de credenciais corretas
+  private validCredentials = {
+    username: 'user',
+    password: 'password',
+  };
 
-  constructor() { }
+  constructor() {}
 
-  login() {
-    this.isLoggedIn = true;
+  // Método para verificar as credenciais do usuário
+  login(username: string, password: string): boolean {
+    return (
+      username === this.validCredentials.username &&
+      password === this.validCredentials.password
+    );
   }
 
-  logout() {
-    this.isLoggedIn = false;
+  // Método que verifica se o usuário está logado
+  isLoggedIn(): boolean {
+    return !!localStorage.getItem('userToken');
   }
 
-  getLoginStatus() {
-    return this.isLoggedIn;
+  // Simula o login utilizando o localStorage para armazenar um token
+  authenticate(token: string): void {
+    localStorage.setItem('userToken', token);
+  }
+
+  // Método para realizar logout, removendo o token do localStorage
+  logout(): void {
+    localStorage.removeItem('userToken');
   }
 }
 ```
 
-### Usando o serviço em um componente
+### Implementando o AuthGuard
 
-Para usar o serviço, importe-o no componente desejado:
+Agora, vamos implementar o guard de autenticação para proteger a rota `home`:
 
 ```typescript
-import { Component } from '@angular/core';
-import { UserService } from '../shared/user.service';
+// src/app/auth.guard.ts
 
-@Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+import { Injectable } from '@angular/core'; // Permite que essa classe seja usada em outras partes do aplicativo
+import { CanActivate, Router } from '@angular/router'; // Importa as ferramentas necessárias para controlar o acesso às páginas
+import { AuthService } from './auth.service'; // Importa o serviço que verifica se o usuário está logado
+
+// Torna essa classe disponível para ser usada em todo o aplicativo
+@Injectable({
+  providedIn: 'root',
 })
-export class HomeComponent {
-  constructor(private userService: UserService) {}
+export class AuthGuard implements CanActivate { // Define que esta classe pode decidir se uma página pode ser acessada
+  constructor(private authService: AuthService, private router: Router) {} // Pega o serviço de autenticação e a ferramenta de navegação
 
-  login() {
-    this.userService.login();
-  }
-
-  logout() {
-    this.userService.logout();
+  // Esse método verifica se o usuário pode acessar a página
+  canActivate(): boolean {
+    // Checa se o usuário está logado usando o serviço de autenticação
+    if (this.authService.isLoggedIn()) {
+      return true; // Se o usuário estiver logado, permite que ele acesse a página
+    } else {
+      this.router.navigate(['/login']); // Se não estiver logado, leva o usuário para a página de login
+      return false; // Bloqueia o acesso à página
+    }
   }
 }
+
+```
+
+### Configurando as Rotas no App
+
+Agora, precisamos atualizar o arquivo de rotas `app.routes.ts` para incluir a proteção da rota `home`:
+
+```typescript
+import { Routes } from '@angular/router';
+import { LoginComponent } from './pages/login/login.component';
+import { HomeComponent } from './pages/home/home.component';
+import { AuthGuard } from './auth.guard';
+
+export const routes: Routes = [
+    { path: '', pathMatch: 'full', redirectTo: 'login' }, // Redireciona para login se a URL estiver vazia
+    { path: 'login', component: LoginComponent }, // Rota para a página de login
+    { path: 'home', component: HomeComponent, canActivate: [AuthGuard] }, // Rota para a página home com proteção
+];
+```
+
+### Implementando a Lógica de Login
+
+No arquivo `login.component.ts`, implemente a lógica para o login do usuário:
+
+```typescript
+// Importa os módulos necessários do Angular
+import { Component } from '@angular/core'; // Permite criar um novo componente
+import { AuthService } from '../../auth.service'; // Importa o serviço que verifica as credenciais do usuário
+import { Router } from '@angular/router'; // Importa a ferramenta que permite navegar entre as páginas
+import { CommonModule } from '@angular/common'; // Importa funcionalidades comuns do Angular
+import { FormsModule } from '@angular/forms'; // Importa funcionalidades para trabalhar com formulários
+
+// Define o componente com um seletor e configurações
+@Component({
+  selector: 'app-login', // Nome do componente que será usado no HTML
+  standalone: true, // Indica que este componente pode ser usado sozinho
+  imports: [CommonModule, FormsModule], // Importa módulos necessários para o funcionamento do componente
+  templateUrl: './login.component.html', // Caminho do arquivo HTML que contém o layout do componente
+  styleUrl: './login.component.css' // Caminho do arquivo CSS que contém os estilos do componente
+})
+export class LoginComponent {
+  // Declara as variáveis que serão usadas no componente
+  username: string = ''; // Armazena o nome de usuário que o usuário digita
+  password: string = ''; // Armazena a senha que o usuário digita
+  errorMessage: string = ''; // Armazena mensagens de erro para mostrar ao usuário
+
+  // O construtor é chamado quando o componente é criado
+  constructor(private authService: AuthService, private router: Router) {}
+
+  // Método que é chamado quando o usuário tenta fazer login
+  login() {
+    // Verifica se as credenciais do usuário estão corretas
+    if (this.authService.login(this.username, this.password)) {
+      // Se o login for bem-sucedido, simula um token de autenticação
+      this.authService.authenticate('fake-token');
+      // Redireciona o usuário para a página inicial
+      this.router.navigate(['/home']);
+    } else {
+      // Se o login falhar, exibe uma mensagem de erro
+      this.errorMessage = 'Credenciais inválidas. Tente novamente.'; // Informa ao usuário que as credenciais estão erradas
+    }
+  }
+}
+```
+
+### Criando o Formulário de Login
+
+No arquivo `login.component.html`, crie um formulário simples para a entrada de credenciais:
+
+```html
+<div class="login-container">
+    <h2>Login</h2>
+    <form (ngSubmit)="login()">
+      <div>
+        <label for="username">Usuário:</label>
+        <input type="text" id="username" [(ngModel)]="username" name="username" required />
+      </div>
+      <div>
+        <label for="password">Senha:</label>
+        <input type="password" id="password" [(ngModel)]="password" name="password" required />
+      </div>
+      <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div> <!-- Exibe mensagem de erro se houver -->
+      <button type="submit">Entrar</button>
+    </form>
+</div>
+```
+
+### Mensagem de Boas-Vindas na Página Home
+
+No arquivo `home.component.ts`, implemente uma mensagem simples para a página inicial:
+
+```html
+<h2>Hello World!!!</h2>
 ```
 
 ### Conclusão
