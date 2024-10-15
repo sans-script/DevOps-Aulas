@@ -110,7 +110,7 @@ Uma URL contendo a sua aplicação será criada. Basta acessá-la pelo navegador
 
 ### Construindo uma aplicação
 
-O Angular possui módulos e componentes [^4]. Na estrutura de arquivos de um projeto Angular, geralmente os módulos e componentes são organizados da seguinte forma:
+O Angular possui módulos e componentes [^5]. Na estrutura de arquivos de um projeto Angular, geralmente os módulos e componentes são organizados da seguinte forma:
 
 **Módulos (Modules):** Os módulos são geralmente representados por arquivos com o sufixo `.module.ts`. Eles são responsáveis por agrupar componentes, diretivas, pipes e serviços relacionados em um contexto lógico. Um módulo pode conter diversos componentes, serviços e outros artefatos relacionados. Exemplo: `home.module.ts`.
 
@@ -247,7 +247,8 @@ import { HomeComponent } from './pages/home/home.component';
 // Define o array de rotas da aplicação.
 export const routes: Routes = [
     // Rota padrão (vazia). Quando o caminho é vazio (''), redireciona o usuário para a rota 'login'.
-    // O pathMatch: 'full' define como o Angular deve combinar a URL atual do navegador com o caminho (ou path) da rota. A URL precisa ser exatamente igual ao caminho definido (neste caso, vazia) para que o redirecionamento ocorra.
+    // O pathMatch: 'full' define como o Angular deve combinar a URL atual do navegador com o caminho (ou path) da rota.
+    // A URL precisa ser exatamente igual ao caminho definido (neste caso, vazia) para que o redirecionamento ocorra.
     { path: '', pathMatch: "full", redirectTo: 'login' },
 
     // Rota para o caminho 'login', que renderiza o LoginComponent.
@@ -638,10 +639,95 @@ No seu arquivo de estilos global (geralmente `styles.css`), inclua as diretivas 
 </div>
 
 ```
+#### 6. Criando o Componente de Botão
 
-#### 6. Execute a aplicação
+Agora, vamos implementar o componente de botão que criamos anteriormente dentro do módulo `shared`. Primeiro, vamos editar o arquivo `shared-button.component.html` com o seguinte código:
 
-Por fim, inicie a aplicação Angular com o comando:
+```html
+<button
+    [ngClass]="[color, hoverColor, 'text-white font-semibold py-2 px-4 rounded-lg transition duration-200 w-full']"
+    [attr.type]="type">
+    {{ text }}
+</button>
+```
+
+Este código define um botão estilizado com Tailwind CSS, onde as classes de cor e efeitos de hover podem ser personalizadas através dos inputs.
+
+### Implementação da Lógica do Botão
+
+Em seguida, vamos implementar a lógica de funcionamento do botão no arquivo `shared-button.component.ts`:
+
+```typescript
+import { CommonModule } from '@angular/common';
+import { Component, Input } from '@angular/core';
+
+@Component({
+  selector: 'app-shared-button',
+  standalone: true,
+  imports: [CommonModule],
+  templateUrl: './shared-button.component.html',
+  styleUrls: './shared-button.component.scss'
+})
+export class SharedButtonComponent {
+  @Input() text: string = 'Button'; // Texto do botão
+  @Input() type: 'button' | 'submit' | 'reset' = 'button'; // Tipo do botão
+  @Input() color: string = 'bg-blue-500'; // Classe de cor padrão
+  @Input() hoverColor: string = 'hover:bg-blue-600'; // Classe de cor de hover padrão
+}
+```
+
+### Exportando o Componente no Módulo Shared
+
+Para garantir que o botão possa ser utilizado em outras partes da aplicação, precisamos exportá-lo no arquivo `shared.module.ts`. O arquivo deve ser configurado assim:
+
+```typescript
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { SharedButtonComponent } from './shared-button/shared-button.component';
+
+@NgModule({
+  declarations: [],
+  imports: [
+    SharedButtonComponent,
+    CommonModule
+  ],
+  exports: [
+    SharedButtonComponent,
+    CommonModule
+  ]
+})
+export class SharedModule { }
+```
+
+### Substituindo o Botão Nativo no Template de Login
+
+Agora, vamos substituir o botão nativo do HTML pelo nosso botão personalizado no template de login. No arquivo `login.component.html`, você deve utilizar o seguinte código:
+
+```html
+<app-shared-button text="Entrar" type="submit"></app-shared-button>
+```
+
+### Importando o Módulo Shared no Componente de Login
+
+Por fim, para que tudo funcione corretamente, é necessário importar o módulo que contém o componente de botão no seu arquivo `login.component.ts`. O código ficará assim:
+
+```typescript
+import { Component } from '@angular/core';
+import { SharedModule } from '../../shared/shared.module';
+
+@Component({
+  selector: 'app-login',
+  standalone: true,
+  imports: [SharedModule],
+  templateUrl: './login.component.html',
+  styleUrls: './login.component.scss'
+})
+export class LoginComponent { }
+```
+
+#### 7. Execute a aplicação
+
+Por fim, inicie a aplicação com o comando:
 
 ```bash
 ng serve
@@ -654,7 +740,9 @@ O Angular já cuida da compilação do CSS automaticamente, portanto não é nec
 No arquivo `home.component.ts`, implemente uma mensagem simples para a página inicial:
 
 ```html
-<h2>Hello World!!!</h2>
+<h2 class="text-3xl font-bold text-center text-blue-600 mt-10">
+    Hello World!!!
+</h2>
 ```
 
 ### Conclusão
