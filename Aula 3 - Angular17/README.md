@@ -267,11 +267,11 @@ Em seguida, adicione o `<router-outlet></router-outlet>` no seu componente raiz,
 
 O `<router-outlet>` é uma diretiva do Angular usada para renderizar os componentes correspondentes às rotas definidas na aplicação, funcionando como um marcador onde o conteúdo da rota ativa é exibido. Ele permite criar aplicações de página única (SPA), onde a navegação entre diferentes "páginas" não requer recarregamento da página inteira. Ao definir as rotas em um arquivo de configuração, o Angular injeta o componente correto no `<router-outlet>` baseado na URL acessada. Pode haver vários `<router-outlet>` para layouts mais complexos, e ele suporta rotas aninhadas para exibição de conteúdo dinâmico dentro de componentes.
 
-### O que são diretivas?
+### O que são Diretivas?
 
 No Angular, diretivas são instruções que permitem modificar o comportamento ou a aparência de elementos no DOM. Existem três tipos principais: **diretivas de atributo**, que alteram a aparência ou o comportamento de um elemento (como `ngClass` e `ngStyle`); **diretivas estruturais**, que modificam o layout removendo ou adicionando elementos ao DOM (`*ngIf`, `*ngFor`); e **diretivas customizadas**, que permitem criar comportamentos reutilizáveis aplicados a elementos. Elas são declaradas usando a anotação `@Directive` e são fundamentais para tornar componentes e elementos HTML interativos e dinâmicos de forma declarativa.
 
-### Alguns exemplos de uso de diretivas estruturais
+### Alguns exemplos de uso de Diretivas Estruturais
 
 #### 1. `ngClass`
 
@@ -332,7 +332,7 @@ A diretiva `ngModel` é usada em formulários para capturar o que o usuário dig
 ```
 - O que o usuário digita no campo de entrada será armazenado na variável `userName` e será mostrado na mensagem "Olá, [nome]".
   
-### Criando o Serviço de Autenticação
+<!-- ### Criando o Serviço de Autenticação
 
 Para gerenciar o estado da aplicação e os dados do usuário, é fundamental criar um serviço de autenticação. Utilize o comando abaixo para gerar o serviço:
 
@@ -477,7 +477,7 @@ export const routes: Routes = [
 ];
 ```
 
-### Implementando a Lógica de Login
+### Implementando a Lógica de Login 
 
 No arquivo `login.component.ts`, implemente a lógica para o login do usuário:
 
@@ -522,10 +522,31 @@ export class LoginComponent {
 }
 ```
 
+-->
 ### Criando o Formulário de Login
 
 No arquivo `login.component.html`, crie um formulário simples para a entrada de credenciais:
 
+
+```html
+<div class="login-container">
+    <h2>Login</h2>
+    <form>
+        <div>
+            <label for="username">Usuário:</label>
+            <input type="text" id="username" name="username" required />
+        </div>
+        <div>
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password" required />
+        </div>
+        <button type="submit">Entrar</button>
+    </form>
+</div>
+
+```
+
+<!-- 
 ```html
 <div class="login-container">
     <h2>Login</h2>
@@ -538,11 +559,95 @@ No arquivo `login.component.html`, crie um formulário simples para a entrada de
         <label for="password">Senha:</label>
         <input type="password" id="password" [(ngModel)]="password" name="password" required />
       </div>
-      <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div> <!-- Exibe mensagem de erro se houver -->
+      <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div> 
       <button type="submit">Entrar</button>
     </form>
 </div>
+``` -->
+
+### Estilização com Tailwind CSS [^4]
+
+#### 1. Instale o Tailwind CSS
+
+Execute o seguinte comando para instalar o Tailwind CSS, juntamente com o PostCSS e o Autoprefixer:
+
+```bash
+npm install -D tailwindcss postcss autoprefixer
 ```
+
+#### 2. Inicialize o arquivo de configuração do Tailwind CSS
+
+Em seguida, crie o arquivo de configuração do Tailwind CSS com o comando abaixo:
+
+```bash
+npx tailwindcss init
+```
+
+#### 3. Configure o Tailwind CSS
+
+Abra o arquivo `tailwind.config.js` e adicione a configuração abaixo para especificar onde o Tailwind deve buscar os arquivos que utilizarão suas classes:
+
+```javascript
+// tailwind.config.js
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./src/**/*.{html,ts}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+```
+
+#### 4. Adicione as diretivas do Tailwind CSS no arquivo de estilização global
+
+No seu arquivo de estilos global (geralmente `styles.css`), inclua as diretivas do Tailwind para que suas classes sejam aplicadas corretamente:
+
+```css
+/* styles.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+#### 5. Modifique seu HTML como achar melhor, usaremos esse exemplo abaixo.
+
+```html
+<div class="login-container flex items-center justify-center min-h-screen bg-gray-100">
+    <div class="bg-white p-6 rounded-lg shadow-md w-96">
+        <h2 class="text-2xl font-bold text-center mb-4">Login</h2>
+        <form>
+            <div class="mb-4">
+                <label for="username" class="block text-sm font-medium text-gray-700">Usuário:</label>
+                <input type="text" id="username" name="username" required
+                    class="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
+            </div>
+            <div class="mb-6">
+                <label for="password" class="block text-sm font-medium text-gray-700">Senha:</label>
+                <input type="password" id="password" name="password" required
+                    class="mt-1 block w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
+            </div>
+            <button type="submit"
+                class="w-full bg-blue-500 text-white font-semibold py-2 rounded-lg hover:bg-blue-600 transition duration-200">
+                Entrar
+            </button>
+        </form>
+    </div>
+</div>
+
+```
+
+#### 6. Execute a aplicação
+
+Por fim, inicie a aplicação Angular com o comando:
+
+```bash
+ng serve
+```
+
+O Angular já cuida da compilação do CSS automaticamente, portanto não é necessário executar um comando separado para isso.
 
 ### Mensagem de Boas-Vindas na Página Home
 
@@ -559,7 +664,12 @@ Você agora tem um esboço básico de um aplicativo Angular, incluindo a configu
 ### Referencias
 
 [^1]: ANGULAR. *What is Angular?* Disponível em: <https://angular.dev/overview>. Acesso em: 12 out. 2024.
+
 [^2]: ANGULAR. *Installation* Disponível em: <https://angular.dev/installation>. Acesso em: 12 out. 2024.
+
 [^3]: CASA DO DESENVOLVEDORE. *Renderização Web: qual a diferença entre CSR, SPA, SSR, SSG e ISR?* Disponível em: <https://blog.casadodesenvolvedor.com.br/renderizacao-web/>. Acesso em: 12 out. 2024.
-[^4]: ANGULAR. *In-depth Guides* Disponível em: <https://angular.dev/guide/components>. Acesso em: 12 out. 2024.
+
+[^4]: TAILWIND CSS. *Install Tailwind CSS with Angular* Disponível em: <https://tailwindcss.com/docs/guides/angular>. Acesso em: 12 out. 2024.
+
+[^5]: ANGULAR. *In-depth Guides* Disponível em: <https://angular.dev/guide/components>. Acesso em: 12 out. 2024.
 
